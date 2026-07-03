@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soilnsoul Gir Cow Ghee — Pure A2 Bilona Ghee, Batch 001</title>
+<meta name="description" content="Hand-churned A2 Bilona ghee from Gir cows in Shivpuri MP. Small batch, direct from tribal farmers. Pre-order Batch 001 — July 2026.">
+<meta property="og:title" content="Soilnsoul Gir Cow Ghee — Pure A2 Bilona Ghee, Batch 001">
+<meta property="og:description" content="Hand-churned A2 Bilona ghee from Gir cows in Shivpuri MP. Small batch, direct from tribal farmers. Pre-order Batch 001 — July 2026.">
+<meta property="og:image" content="https://soilnsoulorganic.com/og-ghee.jpg">
+<meta property="og:type" content="website">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --soil:     #1a1208;
+  --earth:    #2d1f0a;
+  --bark:     #4a3018;
+  --saffron:  #c8891a;
+  --turmeric: #e8a020;
+  --ghee:     #f5e6b0;
+  --milk:     #fdf6e3;
+  --smoke:    #8a7355;
+  --rust:     #8b3a1a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--soil);
+  color: var(--ghee);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ============ MOBILE FIRST BASE (375px+) ============ */
+
+.section { padding: 64px 24px; }
+.container { max-width: 1040px; margin: 0 auto; }
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.eyebrow.saffron { color: var(--saffron); }
+
+h1, h2 { font-family: 'Playfair Display', serif; }
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ghee);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.subhead { font-size: 18px; font-weight: 400; }
+
+/* ---- CTA buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--saffron);
+  color: var(--soil);
+  padding: 16px 32px;
+  min-height: 48px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, background 0.15s ease;
+  width: 100%;
+}
+.btn:hover {
+  transform: scale(1.02);
+  background: #b57a15;
+}
+.btn.dark {
+  background: var(--soil);
+  color: var(--ghee);
+}
+.btn.dark:hover { background: #0f0a04; }
+
+/* Mobile/desktop CTA swap — WhatsApp is the primary CTA on mobile */
+.cta-desktop { display: none !important; }
+.cta-mobile  { display: inline-flex !important; }
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--soil);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, transform 0.4s ease;
+  transform: translateY(0);
+}
+.nav.scrolled { border-bottom-color: var(--bark); }
+.nav-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ghee);
+}
+.nav .btn {
+  width: auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  min-height: 44px;
+}
+/* Mobile nav: hide brand text, show just the CTA */
+@media (max-width: 767px) {
+  .nav-brand { display: none; }
+  .nav-inner { justify-content: flex-end; }
+}
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 108%, rgba(200,137,26,0.16), transparent 65%),
+    var(--soil);
+  padding: 110px 24px 64px;
+}
+.hero-inner { max-width: 680px; }
+.hero .eyebrow { margin-bottom: 22px; }
+.hero h1 { margin-bottom: 20px; }
+.hero-sub {
+  font-size: 18px;
+  color: var(--smoke);
+  margin-bottom: 26px;
+}
+.pill {
+  display: inline-block;
+  background: var(--rust);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+.hero-cta-note {
+  font-size: 13px;
+  color: var(--smoke);
+  margin-top: 14px;
+}
+.trust-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--ghee);
+}
+.trust-bar span { white-space: nowrap; }
+
+/* ============ LIGHT SECTIONS ============ */
+.light {
+  background: var(--milk);
+  color: var(--earth);
+}
+.light .eyebrow { color: var(--rust); }
+.light h2 { color: var(--soil); }
+.light .muted { color: #6b5a3e; }
+
+/* ---- Problem ---- */
+.problem-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.problem-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  text-align: left;
+  margin-top: 36px;
+}
+.problem-cols h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 10px;
+}
+.separator {
+  width: 80px;
+  height: 2px;
+  background: var(--saffron);
+  margin: 44px auto 0;
+}
+
+/* ============ PRODUCT ============ */
+.product { background: var(--earth); }
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.feature-icon { font-size: 26px; line-height: 1.3; flex-shrink: 0; }
+.feature h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ghee);
+  margin-bottom: 4px;
+}
+.feature p { font-size: 15px; color: var(--smoke); }
+
+.outcome-box {
+  border: 2px solid var(--saffron);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 8px;
+  background: rgba(200,137,26,0.06);
+}
+.outcome-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ghee);
+  margin-bottom: 12px;
+}
+.outcome-box ul { list-style: none; }
+.outcome-box li {
+  font-size: 15px;
+  color: var(--ghee);
+  padding: 5px 0;
+}
+.outcome-box li::before {
+  content: "↑ ";
+  color: var(--turmeric);
+  font-weight: 600;
+}
+
+.batch-circle {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(200,137,26,0.15);
+  border: 1px solid rgba(200,137,26,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+.batch-circle span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ghee);
+}
+
+/* ============ TESTIMONIALS ============ */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 36px;
+}
+.t-card {
+  background: #fff;
+  border: 1px solid #ead9b8;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(74,48,24,0.06);
+}
+.t-card blockquote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--earth);
+  margin-bottom: 16px;
+}
+.t-card .who {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--soil);
+}
+.t-card .stars {
+  color: var(--saffron);
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+/* ============ PROCESS ============ */
+.process { background: var(--soil); }
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--saffron);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.step h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ghee);
+  margin-bottom: 6px;
+}
+.step p { font-size: 15px; color: var(--smoke); }
+
+/* ============ PRICING ============ */
+.pricing { background: var(--earth); }
+.price-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.p-card {
+  background: var(--bark);
+  border: 1px solid rgba(200,137,26,0.25);
+  border-radius: 14px;
+  padding: 32px 28px;
+  position: relative;
+  text-align: center;
+}
+.p-card.recommended { border-color: var(--saffron); }
+.badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--saffron);
+  color: var(--soil);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.p-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ghee);
+  margin-bottom: 4px;
+}
+.p-size { font-size: 14px; color: var(--smoke); margin-bottom: 12px; }
+.p-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--ghee);
+  margin-bottom: 10px;
+}
+.p-desc { font-size: 14px; color: var(--smoke); margin-bottom: 22px; }
+.p-save { font-size: 13px; color: var(--turmeric); margin-top: 12px; font-weight: 500; }
+
+.trust-signals {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 44px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ghee);
+}
+
+.india-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.india-badges span {
+  font-size: 13px;
+  color: var(--ghee);
+  border: 1px solid rgba(200,137,26,0.35);
+  border-radius: 999px;
+  padding: 7px 16px;
+  background: rgba(200,137,26,0.07);
+}
+
+.urgency-bar {
+  margin-top: 36px;
+  background: var(--rust);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 20px;
+  border-radius: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============ FAQ ============ */
+.faq-list { max-width: 760px; margin: 36px auto 0; }
+.faq-item {
+  border-bottom: 1px solid #e5d5ae;
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  padding: 20px 4px;
+  min-height: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--soil);
+}
+.faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--saffron);
+  transition: transform 0.3s ease;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-a p {
+  padding: 0 4px 22px;
+  font-size: 15px;
+  color: #6b5a3e;
+}
+
+/* ============ FOUNDER ============ */
+.founder { background: var(--soil); text-align: center; }
+.founder-inner { max-width: 640px; margin: 0 auto; }
+.founder blockquote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 23px;
+  line-height: 1.55;
+  color: var(--ghee);
+  margin-bottom: 28px;
+}
+.founder .who { font-size: 15px; color: var(--smoke); }
+.founder .ig { font-size: 14px; color: var(--saffron); margin-top: 6px; display: inline-block; }
+
+/* ============ FINAL CTA ============ */
+.final-cta {
+  background: var(--saffron);
+  color: var(--soil);
+  text-align: center;
+}
+.final-cta h2 { color: var(--soil); font-size: 30px; }
+.final-cta .btn { margin-top: 8px; }
+.final-cta .note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--bark);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--soil);
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--smoke);
+  text-align: center;
+}
+.footer .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: var(--ghee);
+}
+.footer a:hover { color: var(--ghee); }
+.footer-links { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+
+/* ============ WHATSAPP FLOAT ============ */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--saffron);
+  color: var(--soil);
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.wa-float:hover { transform: scale(1.06); background: var(--turmeric); }
+
+/* ============ SCROLL REVEAL ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ DESKTOP (768px+) ============ */
+@media (min-width: 768px) {
+  .section { padding: 96px 40px; }
+
+  h1 { font-size: 56px; }
+  h2 { font-size: 36px; }
+  .subhead { font-size: 20px; }
+  .hero-sub { font-size: 20px; }
+
+  .btn { width: auto; }
+
+  /* Desktop shows the pre-order CTA, hides WhatsApp CTA */
+  .cta-desktop { display: inline-flex !important; }
+  .cta-mobile  { display: none !important; }
+
+  .nav-inner { padding: 16px 40px; }
+
+  .trust-bar { flex-direction: row; gap: 32px; }
+
+  .problem-cols { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .product-grid { grid-template-columns: 1.1fr 0.9fr; }
+  .batch-circle { width: 340px; height: 340px; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .steps { grid-template-columns: repeat(4, 1fr); }
+  .price-cards { grid-template-columns: 1fr 1fr; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .trust-signals { grid-template-columns: repeat(3, 1fr); }
+  .final-cta h2 { font-size: 44px; }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 40px;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- SECTION 1: STICKY NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Soilnsoul Organic</a>
+    <a class="btn cta-desktop" href="https://soilnsoulorganic.com/products/gir-cow-ghee">Pre-order Now →</a>
+    <a class="btn cta-mobile" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20pre-order%20Soilnsoul%20Ghee">Order on WhatsApp →</a>
+  </div>
+</nav>
+
+<!-- SECTION 2: HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Small batch · Shivpuri, Madhya Pradesh · July 2026</div>
+    <h1>The ghee your grandmother would&nbsp;recognise.</h1>
+    <p class="hero-sub">Your dal will smell different.<br>Your family will notice.<br>That's how you know it's real.</p>
+    <div><span class="pill">⚡ First batch: 200 jars only</span></div>
+    <div>
+      <a class="btn cta-desktop" href="https://soilnsoulorganic.com/products/gir-cow-ghee">Pre-order Your Jar →</a>
+      <a class="btn cta-mobile" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20pre-order%20Soilnsoul%20Ghee">Order on WhatsApp →</a>
+    </div>
+    <p class="hero-cta-note">250ml · 500ml available · Ships July 2026</p>
+    <div class="trust-bar">
+      <span>🌿 A2 Bilona Process</span>
+      <span>🐄 Gir Cow Certified</span>
+      <span>🧑‍🌾 Direct from Farm</span>
+    </div>
+  </div>
+</header>
+
+<!-- SECTION 3: THE PROBLEM -->
+<section class="section light reveal">
+  <div class="problem-inner">
+    <div class="eyebrow">The truth about supermarket ghee</div>
+    <h2>You've been buying ghee.<br>But is it actually ghee?</h2>
+    <div class="problem-cols">
+      <div>
+        <h3>The Reality</h3>
+        <p class="muted">Most ghee sold in India today is made from frozen cream, processed in large factories, and blended with refined oils. The 'pure' label means nothing without knowing the cow breed, the process, and the farmer.</p>
+      </div>
+      <div>
+        <h3>What's Missing</h3>
+        <p class="muted">A2 milk from indigenous breeds like Gir cows contains significantly different fat composition than Holstein (H1) cows used in commercial dairy. The traditional Bilona process — hand-churning cultured curd — is what your grandmother used. Almost nobody does it anymore.</p>
+      </div>
+    </div>
+    <div class="separator"></div>
+  </div>
+</section>
+
+<!-- SECTION 4: THE PRODUCT -->
+<section class="section product reveal">
+  <div class="container product-grid">
+    <div>
+      <div class="eyebrow saffron">Soilnsoul Gir Cow Ghee</div>
+      <h2>Made the way it was always meant to be.</h2>
+      <div class="feature">
+        <div class="feature-icon">🐄</div>
+        <div>
+          <h3>Gir Cow A2 Milk Only</h3>
+          <p>Sourced exclusively from native Gir cows grazing freely in Shivpuri, Madhya Pradesh. No Holstein. No mixing.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🥛</div>
+        <div>
+          <h3>Traditional Bilona Process</h3>
+          <p>Milk → cultured into curd → hand-churned → butter → slow-cooked ghee. Every batch takes 3 days. No centrifuge. No shortcuts.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🧑‍🌾</div>
+        <div>
+          <h3>Direct from Tribal Farmers</h3>
+          <p>We source directly from 8 small farming families. You're not paying a factory markup. They're not losing to a middleman.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📦</div>
+        <div>
+          <h3>Small Batch, Traceable</h3>
+          <p>Each jar carries the batch number, farm name, and production date. 200 jars per batch. That's all.</p>
+        </div>
+      </div>
+      <div class="outcome-box">
+        <h3>What changes when you switch:</h3>
+        <ul>
+          <li>Food tastes richer immediately</li>
+          <li>Less ghee needed per dish</li>
+          <li>The aroma when it hits the pan</li>
+          <li>Your grandmother will recognise it</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="batch-circle">
+        <span>Batch 001 · July 2026 · Shivpuri, MP</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SOCIAL PROOF -->
+<section class="section light reveal">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow">What our customers say</div>
+    <h2>The taste is different.<br>They noticed immediately.</h2>
+    <div class="cards" style="text-align:left;">
+      <div class="t-card">
+        <blockquote>"My dal smelled different the first day. I hadn't changed anything else."</blockquote>
+        <div class="who">— Priya M., Bangalore · 3 months customer</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <blockquote>"I use less of it. The flavour goes further. It's actually cheaper per meal than what I was buying before."</blockquote>
+        <div class="who">— Rahul S., Mumbai · 5 months customer</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <blockquote>"My mother called mid-week asking what I put in the sabzi. I told her: just the ghee changed. She asked me to order her a jar."</blockquote>
+        <div class="who">— Anita K., Pune · 2 months customer</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: THE PROCESS -->
+<section class="section process reveal">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow saffron">Why it takes 3 days</div>
+    <h2>Every shortcut in ghee-making costs you something.</h2>
+    <div class="steps" style="text-align:left;">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Morning milk</h3>
+        <p>Gir cows are milked at sunrise. A2 milk only — never mixed with other breeds or frozen stock.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Cultured into curd</h3>
+        <p>Milk is set as curd with a live culture. This is what most factory ghee skips entirely.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Hand-churned butter</h3>
+        <p>Curd is churned by hand using a traditional wooden churner. Slow. Inefficient. Essential.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Slow-cooked ghee</h3>
+        <p>Butter is simmered on low heat until perfect. Watched. Adjusted. Never rushed. Never automated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: PRICING + PRE-ORDER -->
+<section class="section pricing reveal">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow saffron">Reserve your batch</div>
+    <h2>First batch ships July 2026.<br>200 jars available.</h2>
+    <div class="price-cards">
+      <div class="p-card">
+        <h3>Soilnsoul Gir Cow Ghee</h3>
+        <div class="p-size">250ml</div>
+        <div class="p-price">₹549</div>
+        <p class="p-desc">Perfect for trying. Lasts 4-6 weeks for a family of 3.</p>
+        <a class="btn" href="https://soilnsoulorganic.com/products/gir-cow-ghee">Pre-order 250ml →</a>
+      </div>
+      <div class="p-card recommended">
+        <div class="badge">Recommended</div>
+        <h3>Soilnsoul Gir Cow Ghee</h3>
+        <div class="p-size">500ml</div>
+        <div class="p-price">₹949</div>
+        <p class="p-desc">Our most popular. Lasts 8-10 weeks for a family of 3.</p>
+        <a class="btn" href="https://soilnsoulorganic.com/products/gir-cow-ghee">Pre-order 500ml →</a>
+        <div class="p-save">Save ₹149 vs two 250ml jars</div>
+      </div>
+    </div>
+    <div class="trust-signals">
+      <div>🔒 Secure payment via Razorpay</div>
+      <div>📦 Ships July 2026 — Pay now, charged on dispatch</div>
+      <div>↩️ 100% refund if you don't love it</div>
+    </div>
+    <div class="india-badges">
+      <span>💵 COD available</span>
+      <span>📱 UPI / Cards / NetBanking</span>
+      <span>🚚 Bangalore same-day delivery</span>
+      <span>✅ No questions refund</span>
+      <span>🏷️ FSSAI licensed</span>
+    </div>
+    <div class="urgency-bar">⚡ Only 200 jars in Batch 001 — Pre-orders close when stock is full</div>
+  </div>
+</section>
+
+<!-- SECTION 8: OBJECTION HANDLER (FAQ) -->
+<section class="section light reveal">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow">Common questions</div>
+    <h2>We know what you're thinking.</h2>
+    <div class="faq-list" style="text-align:left;">
+      <div class="faq-item">
+        <button class="faq-q">Why is it more expensive than supermarket ghee?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Because it costs more to make. Gir cows produce less milk than commercial breeds. Bilona process takes 3 days, not 3 hours. Small batches mean no economies of scale. You're paying for the real thing, not a cheaper version of it.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I know it's actually A2?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Gir cows are an indigenous Indian breed that naturally produces only A2 beta-casein protein — unlike imported Holstein cows which produce A1. We source only from certified Gir cow farms in Shivpuri and can share the farm details for every batch.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I don't like it?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>We'll refund you completely — no questions, no return needed. We're confident enough in what we make to say that.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I subscribe for regular supply?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Not yet — we're launching with Batch 001 in July. Regular monthly supply and subscription options are planned for September onwards. Join the pre-order and we'll notify you first.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: FOUNDER NOTE -->
+<section class="section founder reveal">
+  <div class="founder-inner">
+    <blockquote>"I spent 6 years sourcing organic food across India. I know what good looks like. Most of what's sold — even at premium prices — isn't it.<br><br>This ghee is what I give my own family."</blockquote>
+    <div class="who">— Chiranjeev, Founder · Soilnsoul Organic</div><br>
+    <a class="ig" href="https://instagram.com/soilnsoul_organic">@soilnsoul_organic</a>
+  </div>
+</section>
+
+<!-- SECTION 10: FINAL CTA -->
+<section class="section final-cta reveal">
+  <div class="container">
+    <h2>200 jars. July 2026.<br>Don't miss Batch 001.</h2>
+    <a class="btn dark cta-desktop" href="https://soilnsoulorganic.com/products/gir-cow-ghee">Pre-order Now →</a>
+    <a class="btn dark cta-mobile" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20pre-order%20Soilnsoul%20Ghee">Order on WhatsApp →</a>
+    <p class="note">250ml from ₹549 · 500ml from ₹949<br>Free delivery on orders above ₹999</p>
+  </div>
+</section>
+
+<!-- SECTION 11: FOOTER -->
+<footer class="footer">
+  <div class="brand">Soilnsoul Organic</div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a> · <a href="#">Shipping Policy</a> · <a href="#">Contact</a>
+  </div>
+  <a href="https://instagram.com/soilnsoul_organic">@soilnsoul_organic</a>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20pre-order%20Soilnsoul%20Ghee" aria-label="Chat on WhatsApp">W</a>
+
+<script>
+window.addEventListener('load', function () {
+  // Sticky nav border after scrolling 100px
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 100);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Scroll reveal
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // FAQ accordion — one open at a time
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
